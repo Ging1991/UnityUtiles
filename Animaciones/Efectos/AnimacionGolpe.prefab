@@ -118,5 +118,6 @@ MonoBehaviour:
   escalaInicial: 1
   escalaFinal: 5
   salto: 1
-  duracion: 10
+  duracion: 5
   codigo: GOLPE
+  sonido: FxExplosion

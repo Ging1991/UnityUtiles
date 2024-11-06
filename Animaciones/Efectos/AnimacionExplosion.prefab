@@ -120,4 +120,4 @@ MonoBehaviour:
   salto: 1
   duracion: 10
   codigo: EXPLOSION
-  sonido: fx_explosion
+  sonido: FxExplosion

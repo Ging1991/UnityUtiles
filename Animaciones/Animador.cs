@@ -16,6 +16,7 @@ namespace Ging1991.Animaciones {
 		private IFinalizarAnimacion accion;
 		public string codigo;
 		public string sonido;
+		private bool estaAnimando = false;
 
 
 		public void Inicializar (IFinalizarAnimacion accion = null) {
@@ -27,7 +28,10 @@ namespace Ging1991.Animaciones {
 			if (esEscalar) {
 				animaciones.Add(new AnimacionEscalar(escalaInicial, escalaFinal, salto, duracion, transform, GetComponent<ImagenMaster>()));
 			}
-			GetComponent<Reloj>().AgregarPorDecima(this);
+			if (!estaAnimando) {
+				GetComponent<Reloj>().AgregarPorDecima(this);
+				estaAnimando = true;
+			}
 		}
 
 
@@ -44,10 +48,13 @@ namespace Ging1991.Animaciones {
 
 
 		private void Finalizar() {
-			GetComponent<Reloj>().QuitarPorDecima(this);
-			gameObject.SetActive(false);
-			if (accion != null) {
-				accion.FinalizarAnimacion();
+			if (estaAnimando) {
+				GetComponent<Reloj>().QuitarPorDecima(this);
+				gameObject.SetActive(false);
+				if (accion != null) {
+					accion.FinalizarAnimacion();
+				}
+				estaAnimando = false;
 			}
 
 		}
