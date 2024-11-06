@@ -44,6 +44,7 @@ namespace Ging1991.Animaciones {
 
 
 		private void Finalizar() {
+			GetComponent<Reloj>().QuitarPorDecima(this);
 			gameObject.SetActive(false);
 			if (accion != null) {
 				accion.FinalizarAnimacion();
