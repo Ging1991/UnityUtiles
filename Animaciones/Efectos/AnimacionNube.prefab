@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8251168228533900993}
   - component: {fileID: 9126956887562968424}
   m_Layer: 0
-  m_Name: AnimacionExplosion
+  m_Name: AnimacionNube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,14 +73,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.0047169924, g: 0.01447452, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d420c6d6c1b791a4084d7c279ab1eca1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cf6f842154f45b44bf889ff1e71b637, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -119,5 +119,5 @@ MonoBehaviour:
   escalaFinal: 4
   salto: 1
   duracion: 6
-  codigo: EXPLOSION
-  sonido: FxExplosion
+  codigo: NUBE
+  sonido: FxAdquisicion

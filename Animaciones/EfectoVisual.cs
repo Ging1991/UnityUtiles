@@ -18,7 +18,7 @@ namespace Ging1991.Animaciones {
 			if (instancia != null) {
 				instancia.GetComponent<Animador>().Inicializar();
 			} else {
-				Debug.LogError("No se encontro un efecto con el codigo");
+				Debug.LogError($"No se encontró un efecto con el código {codigo}");
 			}
 		}
 

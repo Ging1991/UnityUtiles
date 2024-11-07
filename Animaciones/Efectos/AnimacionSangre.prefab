@@ -120,3 +120,4 @@ MonoBehaviour:
   salto: 1
   duracion: 10
   codigo: SANGRE
+  sonido: FxSerpientes
