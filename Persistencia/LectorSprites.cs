@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace Caballero.Persistencia {
+namespace Ging1991.Persistencia {
 
 	public class LectorSprites {
 

@@ -1,31 +1,23 @@
-﻿using UnityEngine;
-
-namespace Caballero.Persistencia {
+﻿namespace Ging1991.Persistencia {
 		
-	public class LectorEntero : Lector {
+	public class LectorEntero : LectorGenerico<LectorEntero.Dato> {
 
-		private DatoEntero dato;
+		public LectorEntero(Direccion direccion) : base(direccion) {}
 
-		public LectorEntero(string carpeta, string archivo, Modo modo) {
-			this.modo = modo;
-			Inicializar(carpeta, archivo, defecto:JsonUtility.ToJson(new DatoEntero()));
-			dato = JsonUtility.FromJson<DatoEntero>(Leer());
+
+		public void Guardar(int valor) {
+			Dato dato = new Dato();
+			dato.valor = valor;
+			Guardar(dato);
 		}
 
 
-		public DatoEntero LeerDatos() {
-			return dato;
+		[System.Serializable]
+		public class Dato {
+
+			public int valor;
+
 		}
-
-
-		public void GuardarDatos() {
-			Guardar(JsonUtility.ToJson(dato));
-		}
-
-		public override void Descartar() {
-			dato = JsonUtility.FromJson<DatoEntero>(Leer());
-		}
-
 
 
 	}

@@ -2,9 +2,9 @@
 using System.IO;
 using UnityEngine;
 
-namespace Caballero.Persistencia {
+namespace Ging1991.Persistencia {
 
-	public abstract class Lector {
+	public abstract class LectorAntiguo {
 
 		public enum Modo {SOLO_LECTURA, LECTURA_ESCRITURA, ESCRITURA_CON_INICIALIZACION}
 		protected Modo modo;
