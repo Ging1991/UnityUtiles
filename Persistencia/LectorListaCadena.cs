@@ -4,11 +4,11 @@ namespace Ging1991.Persistencia {
 		
 	public class LectorListaCadena : LectorGenerico<LectorListaCadena.Dato> {
 
-		public LectorListaCadena(Direccion direccion) : base(direccion) {}
+		public LectorListaCadena(string direccion, string direccionInicializacion = "") : base(direccion, direccionInicializacion) {}
 
 
-		public  void Guardar(List<string> valor) {
-			Dato dato= new Dato();
+		public void Guardar(List<string> valor) {
+			Dato dato = new Dato();
 			dato.valor = valor;
 			Guardar(dato);
 		}
