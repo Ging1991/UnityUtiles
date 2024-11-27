@@ -32,7 +32,7 @@ namespace Ging1991.Persistencia {
 
 
 		public void InicializarDesdeRecursos(string direccion) {
-			string datos = LectorRecursos.LeerCadena(direccion);
+			string datos = LectorRecursos<T>.LeerCadena(direccion);
 			GuardarHaciaStream(datos);
 		}
 
