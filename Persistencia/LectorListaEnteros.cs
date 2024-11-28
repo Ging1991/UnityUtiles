@@ -4,7 +4,7 @@ namespace Ging1991.Persistencia {
 		
 	public class LectorListaEnteros : LectorGenerico<LectorListaEnteros.Dato> {
 		
-		public LectorListaEnteros(string direccion, string direccionInicializacion = "") : base(direccion, direccionInicializacion) {}
+		public LectorListaEnteros(string direccion, Tipo tipo, string inicializacion = "") : base(direccion, tipo, inicializacion) {}
 		
 		
 		public  void Guardar(List<int> valor) {

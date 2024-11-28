@@ -2,7 +2,7 @@
 		
 	public class LectorCadena : LectorGenerico<LectorCadena.Dato> {
 
-		public LectorCadena(string direccion, string direccionInicializacion = "") : base(direccion, direccionInicializacion) {}
+		public LectorCadena(string direccion, Tipo tipo, string direccionInicializacion = "") : base(direccion, tipo, direccionInicializacion) {}
 
 
 		public void Guardar(string valor) {

@@ -2,7 +2,7 @@
 		
 	public class LectorBooleano : LectorGenerico<LectorBooleano.Dato> {
 
-		public LectorBooleano(string direccion, string direccionInicializacion = "") : base(direccion, direccionInicializacion) {}
+		public LectorBooleano(string direccion, Tipo tipo, string direccionInicializacion = "") : base(direccion, tipo, direccionInicializacion) {}
 
 
 		public void Guardar(bool valor) {

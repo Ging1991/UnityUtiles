@@ -1,4 +1,6 @@
-﻿namespace Ging1991.Persistencia.Direcciones {
+﻿using System.IO;
+
+namespace Ging1991.Persistencia.Direcciones {
 
 	public class DireccionRecursos : Direccion {
 
@@ -6,12 +8,12 @@
 
 
 		public override string Generar() {
-			return $"\\{carpeta}\\{archivo}";
+			return $"{carpeta}/{Path.GetFileNameWithoutExtension(archivo)}";
 		}
 
 
 		public override string Generar(string archivo) {
-			return $"\\{carpeta}\\{archivo}";
+			return $"{carpeta}/{Path.GetFileNameWithoutExtension(archivo)}";
 		}
 
 

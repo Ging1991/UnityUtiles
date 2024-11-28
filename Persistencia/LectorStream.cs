@@ -1,13 +1,17 @@
 ﻿using System.IO;
+using UnityEngine;
 
 namespace Ging1991.Persistencia {
 
-	public abstract class LectorStream {
+	public abstract class Lector {
 
-		private readonly string direccion;
+		protected readonly string direccion;
+		public enum Tipo {STREAM, RECURSO}
+		protected Tipo tipo;
 
-		public LectorStream(string direccion) {
+		public Lector(string direccion, Tipo tipo) {
 			this.direccion = direccion;
+			this.tipo = tipo;
 		}
 
 
@@ -23,6 +27,12 @@ namespace Ging1991.Persistencia {
 		
 		protected void GuardarHaciaStream(string contenido) {
 			File.WriteAllText(direccion, contenido);
+		}
+
+
+		protected string LeerDesdeRecursos(string direccion) {
+			TextAsset recurso = (TextAsset) Resources.Load(direccion, typeof(TextAsset));
+			return recurso.text;
 		}
 
 
