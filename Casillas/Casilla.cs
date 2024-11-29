@@ -2,38 +2,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Ging1991.UI {
+namespace Ging1991.Casillas {
 
 	public class Casilla : MonoBehaviour {
 
 		public Sprite imgActivado, imgDesactivado;
-		public bool activado;
+		public bool valor;
 		public string codigo;
-		public List<CasillaObservador> observadores;
+		private List<ICasillaObservador> observadores;
 
 
 		public void Iniciar() {
-			activado = false;
-			observadores = new List<CasillaObservador>();
+			valor = false;
+			observadores = new List<ICasillaObservador>();
 		}
 
 
-		public void AgregarObservador (CasillaObservador observador) {
+		public void AgregarObservador (ICasillaObservador observador) {
 			observadores.Add(observador);
 		}
 
 
 		void OnMouseDown() {
-			if (activado) {
-				activado = false;
-				GetComponentInChildren<Image>().sprite = imgDesactivado;
-			} else {
-				activado = true;
-				GetComponentInChildren<Image>().sprite = imgActivado;
-			}
+			CambiarValor();
+			InformarObservadores();
+		}
 
-			foreach (CasillaObservador observador in observadores) {
-				observador.PresionarCasilla(codigo);
+
+		private void CambiarValor() {
+			valor = !valor;
+			GetComponentInChildren<Image>().sprite = valor ? imgActivado : imgDesactivado;
+		}
+
+
+		private void InformarObservadores(){
+			foreach (ICasillaObservador observador in observadores) {
+				observador.PresionarCasilla(codigo, valor);
 			}
 		}
 
@@ -44,7 +48,7 @@ namespace Ging1991.UI {
 			for (var i = 0; i < arreglo.Length; i++) {
 				Casilla casillaActual = arreglo[i].GetComponent<Casilla>();
 				if (casillaActual.codigo == codigo)
-					ret = casillaActual.activado;
+					ret = casillaActual.valor;
 			}
 			return ret;
 		}

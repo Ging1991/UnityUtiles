@@ -33,6 +33,16 @@ namespace Ging1991.Persistencia.Direcciones {
 		}
 
 
+		public static int CantidadDeArchivosEnCarpeta(string direccion) {
+
+			if (Directory.Exists(direccion)) {
+				string[] files = Directory.GetFiles(direccion, "*.json");
+				return files.Length;
+			}
+			return 0;
+		}
+
+
 	}
 
 }
