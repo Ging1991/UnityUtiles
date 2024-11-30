@@ -5,15 +5,17 @@ namespace Ging1991.Casillas {
 
 	public class GrupoDeCasillas : MonoBehaviour, ICasillaObservador {
 
-		private readonly List<Casilla> casillas;
+		public List<GameObject> casillas;
 		private List<ICasillaObservador> observadores;
 		public string codigo;
+		public Vector3 posicionVisible;
+		public Vector3 posicionInvisible;
 
 
 		public void Iniciar() {
 			observadores = new List<ICasillaObservador>();
 			foreach (var casilla in casillas) {
-				casilla.AgregarObservador(this);
+				casilla.GetComponent<Casilla>().AgregarObservador(this);
 			}
 		}
 
@@ -26,8 +28,8 @@ namespace Ging1991.Casillas {
 		public List<string> GetCasillasActivas() {
 			List<string> ret = new List<string>();
 			foreach(var casilla in casillas) {
-				if (casilla.valor == true)
-					ret.Add(casilla.codigo);
+				if (casilla.GetComponent<Casilla>() == true)
+					ret.Add(casilla.GetComponent<Casilla>().codigo);
 			}
 			return ret;
 		}
@@ -38,6 +40,16 @@ namespace Ging1991.Casillas {
 				observador.PresionarCasilla(codigo, valor);
 			}
         }
+
+
+		public void MostrarGrupo() {
+			transform.position = posicionVisible;
+		}
+
+
+		public void EsconderGrupo() {
+			transform.localPosition = posicionInvisible;
+		}
 
 
     }

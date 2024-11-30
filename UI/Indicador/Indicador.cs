@@ -14,6 +14,15 @@ namespace Ging1991.UI.Indicador {
 		}
 
 
+		public void SetCantidadMaxima(int cantidad) {
+			transform.GetChild(0).gameObject.SetActive(cantidad > 0);
+			transform.GetChild(1).gameObject.SetActive(cantidad > 1);
+			transform.GetChild(2).gameObject.SetActive(cantidad > 2);
+			transform.GetChild(3).gameObject.SetActive(cantidad > 3);
+			transform.GetChild(4).gameObject.SetActive(cantidad > 4);
+		}
+
+
 	}
 
 }

@@ -12,7 +12,7 @@ namespace Ging1991.Casillas {
 		private List<ICasillaObservador> observadores;
 
 
-		public void Iniciar() {
+		void Start() {
 			valor = false;
 			observadores = new List<ICasillaObservador>();
 		}
