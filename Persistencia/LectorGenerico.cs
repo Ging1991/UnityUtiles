@@ -18,8 +18,9 @@ namespace Ging1991.Persistencia {
 
 		public T Leer() {
 			if (dato == null) {
-				if (tipo == Tipo.STREAM)
+				if (tipo == Tipo.STREAM) {
 					dato = JsonUtility.FromJson<T>(LeerDesdeStream());
+				}
 				if (tipo == Tipo.RECURSO)
 					dato = JsonUtility.FromJson<T>(LeerDesdeRecursos(direccion));
 			}
