@@ -1,4 +1,4 @@
-﻿namespace Ging1991.Persistencia {
+﻿namespace Ging1991.Persistencia.Lectores {
 		
 	public class LectorBooleano : LectorGenerico<LectorBooleano.Dato> {
 

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
-namespace Ging1991.Persistencia {
+namespace Ging1991.Persistencia.Lectores {
 
 	public abstract class Lector {
 

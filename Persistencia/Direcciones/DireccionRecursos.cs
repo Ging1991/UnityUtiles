@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using UnityEngine;
 
 namespace Ging1991.Persistencia.Direcciones {
 
@@ -8,6 +9,8 @@ namespace Ging1991.Persistencia.Direcciones {
 
 
 		public override string Generar() {
+			if (archivo == "")
+				Debug.LogWarning("No hay un archivo cargado, use Generar(string archivo) en su lugar.");
 			return $"{carpeta}/{Path.GetFileNameWithoutExtension(archivo)}";
 		}
 

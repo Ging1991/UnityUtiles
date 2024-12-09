@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ging1991.Persistencia {
+namespace Ging1991.Persistencia.Lectores {
 		
 	public class LectorListaEnteros : LectorGenerico<LectorListaEnteros.Dato> {
 		

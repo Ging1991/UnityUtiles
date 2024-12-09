@@ -21,7 +21,7 @@ namespace Ging1991.Persistencia.Direcciones {
 
 
 		public static string GetDireccionPlataforma() {
-			return (Application.platform == RuntimePlatform.Android ? (Application.persistentDataPath) : Application.dataPath);
+			return Application.platform == RuntimePlatform.Android ? Application.persistentDataPath : Application.dataPath;
 		}
 
 
@@ -34,7 +34,6 @@ namespace Ging1991.Persistencia.Direcciones {
 
 
 		public static int CantidadDeArchivosEnCarpeta(string direccion) {
-
 			if (Directory.Exists(direccion)) {
 				string[] files = Directory.GetFiles(direccion, "*.json");
 				return files.Length;

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Ging1991.Persistencia {
+namespace Ging1991.Persistencia.Lectores {
 		
 	public abstract class LectorGenerico<T> : Lector {
 
