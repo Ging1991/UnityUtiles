@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4817487672694293120}
   - component: {fileID: 4551173384569257896}
   m_Layer: 0
-  m_Name: ObjIndicadorDiamante
+  m_Name: ObjContador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 6051867442620391904, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
       propertyPath: m_Name
-      value: ObjDiamante4
+      value: Hijo4
       objectReference: {fileID: 0}
     - target: {fileID: 6051867442620391911, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
@@ -188,7 +188,7 @@ PrefabInstance:
     - target: {fileID: 6051867442620391904, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
       propertyPath: m_Name
-      value: ObjDiamante1
+      value: Hijo1
       objectReference: {fileID: 0}
     - target: {fileID: 6051867442620391911, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 6051867442620391904, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
       propertyPath: m_Name
-      value: ObjDiamante5
+      value: Hijo5
       objectReference: {fileID: 0}
     - target: {fileID: 6051867442620391911, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
@@ -438,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 6051867442620391904, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
       propertyPath: m_Name
-      value: ObjDiamante2
+      value: Hijo2
       objectReference: {fileID: 0}
     - target: {fileID: 6051867442620391911, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
@@ -563,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 6051867442620391904, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}
       propertyPath: m_Name
-      value: ObjDiamante3
+      value: Hijo3
       objectReference: {fileID: 0}
     - target: {fileID: 6051867442620391911, guid: 8cb021703421c854b8eab6a35a7ea534,
         type: 3}

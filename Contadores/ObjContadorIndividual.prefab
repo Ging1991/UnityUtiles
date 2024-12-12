@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6051867442620391909}
   - component: {fileID: 6051867442620391910}
   m_Layer: 2
-  m_Name: ObjDiamante
+  m_Name: ObjContadorIndividual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc5b05c44b25b3d478de5a7853ad93b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57cf57da512b1904dbe71897a60eab58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,6 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e43fd4b323f6d4b828923288194cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgActivo: {fileID: 21300000, guid: cc5b05c44b25b3d478de5a7853ad93b5, type: 3}
-  imgInactivo: {fileID: 21300000, guid: 3781c8f4a5f52304ab1c984321a38f8b, type: 3}
-  imgDeshabilitado: {fileID: 21300000, guid: 337169bd2f0fd724d95530f14a364341, type: 3}
+  imgActivo: {fileID: 21300000, guid: 57cf57da512b1904dbe71897a60eab58, type: 3}
+  imgInactivo: {fileID: 21300000, guid: a4bfb9a25a0238d4d91bcc4b2de60bc0, type: 3}
+  imgInhabilitado: {fileID: 21300000, guid: 089b8ad563535ac4188c536834946414, type: 3}
