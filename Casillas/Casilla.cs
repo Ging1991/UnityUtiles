@@ -14,16 +14,26 @@ namespace Ging1991.Casillas {
 
 		void Start() {
 			valor = false;
-			observadores = new List<ICasillaObservador>();
+			if (observadores == null) {
+				observadores = new List<ICasillaObservador>();
+			}
 		}
 
 
 		public void AgregarObservador (ICasillaObservador observador) {
+			if (observadores == null) {
+				observadores = new List<ICasillaObservador>();
+			}
 			observadores.Add(observador);
 		}
 
 
 		void OnMouseDown() {
+			Presionar();
+		}
+
+
+		public void Presionar() {
 			CambiarValor();
 			InformarObservadores();
 		}
