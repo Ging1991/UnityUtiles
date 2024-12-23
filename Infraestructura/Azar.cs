@@ -18,6 +18,11 @@ namespace Ging1991.Infraestructura {
 		}
 
 
+		public static string ValorAleatorio(List<string> elementos) {
+			return elementos[GenerarEnteroEntre(0, elementos.Count)];
+		}
+
+
 		public static UnityEngine.GameObject ValorAleatorio(List<UnityEngine.GameObject> elementos) {
 			return elementos[GenerarEnteroEntre(0, elementos.Count)];
 		}
