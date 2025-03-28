@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ging1991.UI {
 
@@ -19,6 +20,12 @@ namespace Ging1991.UI {
 		public void Bloquear(bool debeBloquear) {
 			capaBloqueadora = LayerMask.NameToLayer(CAPA_BLOQUEADORA);
 			gameObject.layer = debeBloquear ? capaBloqueadora : capaOriginal;
+
+			// Si es un boton
+			Button button = GetComponent<Button>();
+			if (button != null) {
+				button.interactable = !debeBloquear;
+			}
 		}
 
 
